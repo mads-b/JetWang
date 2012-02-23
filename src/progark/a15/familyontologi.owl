@@ -1,0 +1,204 @@
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+
+Ontology: <http://www.semanticweb.org/ontologies/2012/0/family.owl>
+
+
+Datatype: <http://www.semanticweb.org/ontologies/2012/0/family.owl#GreaterThan65>
+
+    EquivalentTo: 
+        xsd:nonNegativeInteger[> 65]
+    
+    
+Datatype: <http://www.semanticweb.org/ontologies/2012/0/family.owl#LessThan10>
+
+    EquivalentTo: 
+        xsd:nonNegativeInteger[< 10]
+    
+    
+Datatype: xsd:nonNegativeInteger
+
+    
+Datatype: xsd:integer
+
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasDecendant>
+
+    Characteristics: 
+        InverseFunctional
+    
+    InverseOf: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasAncestor>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasSister>
+
+    SubPropertyOf: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasSibling>
+    
+    Range: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#Female>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2012/0/family.owl#likes>
+
+    DisjointWith: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#dislikes>
+    
+    Characteristics: 
+        Symmetric
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasDaughter>
+
+    SubPropertyOf: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasChild>
+    
+    Range: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#Female>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasSibling>
+
+    Characteristics: 
+        Irreflexive,
+        Symmetric
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasAncestor>
+
+    SubPropertyChain: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasParent>
+    
+    Domain: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#Person>
+    
+    Range: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#Person>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasDecendant>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasMother>
+
+    SubPropertyOf: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasParent>
+    
+    Characteristics: 
+        Functional
+    
+    Range: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#Female>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasBrother>
+
+    SubPropertyOf: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasSibling>
+    
+    Range: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#Male>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2012/0/family.owl#dislikes>
+
+    DisjointWith: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#likes>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2012/0/family.owl#isMarriedTo>
+
+    Characteristics: 
+        Irreflexive,
+        Functional
+    
+    Domain: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#Person>
+    
+    Range: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#Person>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasParent>
+
+    SubPropertyOf: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasAncestor>
+    
+    InverseOf: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasChild>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasChild>
+
+    Characteristics: 
+        InverseFunctional
+    
+    InverseOf: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasParent>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasSon>
+
+    SubPropertyOf: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasChild>
+    
+    Range: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#Male>
+    
+    
+ObjectProperty: <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasFather>
+
+    SubPropertyOf: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasParent>
+    
+    Characteristics: 
+        Functional
+    
+    Range: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#Male>
+    
+    
+DataProperty: <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasAge>
+
+    Characteristics: 
+        Functional
+    
+    Range: 
+        xsd:nonNegativeInteger
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2012/0/family.owl#Person>
+
+    EquivalentTo: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#Female>
+         or <http://www.semanticweb.org/ontologies/2012/0/family.owl#Male>
+    
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasMother> exactly 1 <http://www.semanticweb.org/ontologies/2012/0/family.owl#Female>,
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#hasFather> exactly 1 <http://www.semanticweb.org/ontologies/2012/0/family.owl#Male>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2012/0/family.owl#Female>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#Person>
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#Male>
+    
+    
+Class: <http://www.semanticweb.org/ontologies/2012/0/family.owl#Male>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#Person>
+    
+    DisjointWith: 
+        <http://www.semanticweb.org/ontologies/2012/0/family.owl#Female>
+    
+    
