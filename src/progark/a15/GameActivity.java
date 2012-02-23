@@ -9,6 +9,7 @@ public class GameActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        //DERPDERPDERPDERPDERPDERPDERPDERPDERPDERPDERPDERPDERPDERPDERPDERPDERPDERPDERPDERPDERPDERPDERPDERP
         //PlanetView planetView = (PlanetView)this.findViewById(R.id.planetView);
     }
 }
